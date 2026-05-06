@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -8,174 +9,67 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Constellation Brands
 providerId: constellation-brands
-publisherName: Constellation Brands
-serviceCategory: API
+publisherName: Constellation Brands, Inc.
+serviceCategory: Beverages / Product Data API
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
-  - Alcohol
-  - Beer
   - Beverages
   - Digital Assets
-  - Fortune 500
-  - Spirits
-  - Wine
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Constellation Brands API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: 'FOCUS-aligned FinOps for Constellation Brands: partner-distributed product / digital-asset
+  API; access is governed by the partner agreement rather than per-call billing. FinOps applies to internal
+  attribution of partner-API consumption and to commercial counterparty spend, not to a metered API
+  bill.'
+notes: Constellation Brands does not publish per-call API pricing. This artifact tracks internal-only
+  meters useful for chargeback within consuming organizations.
+sources:
+  - https://dev.cbrands.com
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Partner-Bundled
+  billingFrequency: Per-Invoice
   billingCurrency: USD
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
     - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
-  ServiceName: Constellation Brands
-  ServiceCategory: Developer Tools / API
+  ServiceName: Constellation Brands API
+  ServiceCategory: Beverages / Product Data API
   ProviderName: Constellation Brands
-  PublisherName: Constellation Brands
-  InvoiceIssuerName: Constellation Brands
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Constellation Brands, Inc.
+  InvoiceIssuerName: Constellation Brands, Inc.
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-  - name: api_requests
-    description: Count of billable API requests
+  - name: api_calls_internal
+    description: Internal-only meter — count of API calls per consuming application for chargeback within
+      the partner organization. Not billed externally by Constellation Brands.
     unit: request
     aggregation: sum
     dimensions:
       - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - consumer_app
+      - environment
+  - name: digital_asset_downloads
+    description: Bottle shot / digital-asset downloads served from the partner API
+    unit: download
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Product Items API
-    baseURL: https://api.cbrands.com/v3
-    tags:
-      - Catalog
-      - Items
-      - Products
-    serviceName: Product Items API
-    serviceCategory: API
-  - name: Bottle Shots API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Bottle Shots
-      - Digital Assets
-      - Images
-    serviceName: Bottle Shots API
-    serviceCategory: API
-  - name: Tasting Notes API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Documents
-      - Tasting Notes
-      - Wine
-    serviceName: Tasting Notes API
-    serviceCategory: API
-  - name: Hot Sheets API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Awards
-      - Documents
-      - Reviews
-    serviceName: Hot Sheets API
-    serviceCategory: API
-  - name: Shelf Talkers API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Merchandising
-      - POS
-      - Retail
-    serviceName: Shelf Talkers API
-    serviceCategory: API
-  - name: Neck Hangers API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Merchandising
-      - POS
-      - Retail
-    serviceName: Neck Hangers API
-    serviceCategory: API
-  - name: Recipes API
-    baseURL: https://api.cbrands.com/api/1.0
-    tags:
-      - Cocktails
-      - Recipes
-    serviceName: Recipes API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - asset_type
+      - brand
+principles:
+  - name: Visibility
+    description: Track API key usage internally; coordinate with api.support@cbrands.com for partner-side
+      usage reports under the partner agreement.
+  - name: Allocation
+    description: Allocate by consuming product / brand integration via API-key segmentation.
+  - name: Optimization
+    description: Cache product metadata and bottle-shot assets; pull deltas via the items product API
+      rather than full refresh; right-size partner agreement scope at renewal.
+  - name: Accountability
+    description: Trade-marketing / partner-integration teams own consumption against the partner agreement.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

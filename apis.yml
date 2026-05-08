@@ -39,6 +39,8 @@ apis:
     properties:
       - url: https://dev.cbrands.com/docs/
         type: Documentation
+      - url: openapi/constellation-brands-openapi.yml
+        type: OpenAPI
     description: >-
       Provides item-level product master data including SKU identifiers,
       descriptions, varietal and category metadata, and pointers to digital

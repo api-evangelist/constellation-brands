@@ -1,0 +1,211 @@
+openapi: 3.1.0
+info:
+  title: Constellation Brands Partner API
+  version: '1.0'
+  description: >-
+    Partner-facing REST API exposing Constellation Brands product master
+    data and merchandising digital assets including bottle shots, tasting
+    notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes.
+    All endpoints require an API key issued through the developer portal.
+  x-generated-from: https://dev.cbrands.com/docs/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://api.cbrands.com
+    description: Constellation Brands API
+security:
+  - ApiKeyAuth: []
+paths:
+  /api/1.0/bottleShots:
+    get:
+      summary: List bottle shots
+      operationId: listBottleShots
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Bottle shot collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /api/1.0/bottleShots/{gtin}:
+    get:
+      summary: Get bottle shot by GTIN
+      operationId: getBottleShot
+      parameters:
+        - name: gtin
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Bottle shot resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /api/1.0/tastingNotes:
+    get:
+      summary: List tasting notes
+      operationId: listTastingNotes
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Tasting notes collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /api/1.0/hotSheets:
+    get:
+      summary: List hot sheets
+      operationId: listHotSheets
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Hot sheets collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /api/1.0/shelfTalkers:
+    get:
+      summary: List shelf talkers
+      operationId: listShelfTalkers
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Shelf talkers collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /api/1.0/neckHangers:
+    get:
+      summary: List neck hangers
+      operationId: listNeckHangers
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Neck hangers collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /api/1.0/recipes:
+    get:
+      summary: List recipes
+      operationId: listRecipes
+      parameters:
+        - name: modifiedSince
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Recipes collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /v3/items:
+    get:
+      summary: List items
+      operationId: listItems
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Items collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /v3/items/{itemId}:
+    get:
+      summary: Get item by ID
+      operationId: getItem
+      parameters:
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Item resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /v3/items/{itemId}/digitalAssets:
+    get:
+      summary: Get item digital assets
+      operationId: getItemDigitalAssets
+      parameters:
+        - name: itemId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Digital assets for item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: apiKey
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+        total:
+          type: integer
+        page:
+          type: integer

@@ -17,7 +17,7 @@ created: '2026-03-21'
 modified: '2026-04-29'
 position: Consumer
 specificationVersion: '0.19'
-x-type: company
+kind: company
 description: >-
   Constellation Brands is a Fortune 500 producer and marketer of beer, wine,
   and spirits brands such as Corona, Modelo, Robert Mondavi, and Casa Noble.
@@ -138,15 +138,15 @@ common:
     url: https://www.cbrands.com/
   - type: Developer Portal
     url: https://dev.cbrands.com/docs/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/ConstellationBrands
   - type: Investor Relations
     url: https://ir.cbrands.com/
   - type: Careers
     url: https://careers.cbrands.com/
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.cbrands.com/privacy-notice
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.cbrands.com/terms-of-use
 maintainers:
   - FN: Kin Lane

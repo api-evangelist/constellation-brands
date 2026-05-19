@@ -1,0 +1,448 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Constellation Brands Partner API
+  description: 'Constellation Brands Partner API. 10 operations. Lead operation: List bottle shots. Self-contained Naftiko
+    capability covering one Constellation Brands business surface.'
+  tags:
+  - Constellation Brands
+  - Constellation Brands Partner API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    CONSTELLATION_BRANDS_API_KEY: CONSTELLATION_BRANDS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: constellation-brands
+    baseUri: https://api.cbrands.com
+    description: Constellation Brands Partner API business capability. Self-contained, no shared references.
+    resources:
+    - name: api-1.0-bottleShots
+      path: /api/1.0/bottleShots
+      operations:
+      - name: listbottleshots
+        method: GET
+        description: List bottle shots
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: api-1.0-bottleShots-gtin
+      path: /api/1.0/bottleShots/{gtin}
+      operations:
+      - name: getbottleshot
+        method: GET
+        description: Get bottle shot by GTIN
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: gtin
+          in: path
+          type: string
+          required: true
+    - name: api-1.0-hotSheets
+      path: /api/1.0/hotSheets
+      operations:
+      - name: listhotsheets
+        method: GET
+        description: List hot sheets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: api-1.0-neckHangers
+      path: /api/1.0/neckHangers
+      operations:
+      - name: listneckhangers
+        method: GET
+        description: List neck hangers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: api-1.0-recipes
+      path: /api/1.0/recipes
+      operations:
+      - name: listrecipes
+        method: GET
+        description: List recipes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: api-1.0-shelfTalkers
+      path: /api/1.0/shelfTalkers
+      operations:
+      - name: listshelftalkers
+        method: GET
+        description: List shelf talkers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: api-1.0-tastingNotes
+      path: /api/1.0/tastingNotes
+      operations:
+      - name: listtastingnotes
+        method: GET
+        description: List tasting notes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: modifiedSince
+          in: query
+          type: string
+    - name: v3-items
+      path: /v3/items
+      operations:
+      - name: listitems
+        method: GET
+        description: List items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: page
+          in: query
+          type: integer
+        - name: pageSize
+          in: query
+          type: integer
+    - name: v3-items-itemId
+      path: /v3/items/{itemId}
+      operations:
+      - name: getitem
+        method: GET
+        description: Get item by ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: itemId
+          in: path
+          type: string
+          required: true
+    - name: v3-items-itemId-digitalAssets
+      path: /v3/items/{itemId}/digitalAssets
+      operations:
+      - name: getitemdigitalassets
+        method: GET
+        description: Get item digital assets
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: itemId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: apiKey
+      value: '{{env.CONSTELLATION_BRANDS_API_KEY}}'
+      placement: query
+  exposes:
+  - type: rest
+    namespace: constellation-brands-rest
+    port: 8080
+    description: REST adapter for Constellation Brands Partner API. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/1-0/bottleshots
+      name: api-1-0-bottleshots
+      description: REST surface for api-1.0-bottleShots.
+      operations:
+      - method: GET
+        name: listbottleshots
+        description: List bottle shots
+        call: constellation-brands.listbottleshots
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/bottleshots/{gtin}
+      name: api-1-0-bottleshots-gtin
+      description: REST surface for api-1.0-bottleShots-gtin.
+      operations:
+      - method: GET
+        name: getbottleshot
+        description: Get bottle shot by GTIN
+        call: constellation-brands.getbottleshot
+        with:
+          gtin: rest.gtin
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/hotsheets
+      name: api-1-0-hotsheets
+      description: REST surface for api-1.0-hotSheets.
+      operations:
+      - method: GET
+        name: listhotsheets
+        description: List hot sheets
+        call: constellation-brands.listhotsheets
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/neckhangers
+      name: api-1-0-neckhangers
+      description: REST surface for api-1.0-neckHangers.
+      operations:
+      - method: GET
+        name: listneckhangers
+        description: List neck hangers
+        call: constellation-brands.listneckhangers
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/recipes
+      name: api-1-0-recipes
+      description: REST surface for api-1.0-recipes.
+      operations:
+      - method: GET
+        name: listrecipes
+        description: List recipes
+        call: constellation-brands.listrecipes
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/shelftalkers
+      name: api-1-0-shelftalkers
+      description: REST surface for api-1.0-shelfTalkers.
+      operations:
+      - method: GET
+        name: listshelftalkers
+        description: List shelf talkers
+        call: constellation-brands.listshelftalkers
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/1-0/tastingnotes
+      name: api-1-0-tastingnotes
+      description: REST surface for api-1.0-tastingNotes.
+      operations:
+      - method: GET
+        name: listtastingnotes
+        description: List tasting notes
+        call: constellation-brands.listtastingnotes
+        with:
+          modifiedSince: rest.modifiedSince
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/items
+      name: v3-items
+      description: REST surface for v3-items.
+      operations:
+      - method: GET
+        name: listitems
+        description: List items
+        call: constellation-brands.listitems
+        with:
+          page: rest.page
+          pageSize: rest.pageSize
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/items/{itemid}
+      name: v3-items-itemid
+      description: REST surface for v3-items-itemId.
+      operations:
+      - method: GET
+        name: getitem
+        description: Get item by ID
+        call: constellation-brands.getitem
+        with:
+          itemId: rest.itemId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v3/items/{itemid}/digitalassets
+      name: v3-items-itemid-digitalassets
+      description: REST surface for v3-items-itemId-digitalAssets.
+      operations:
+      - method: GET
+        name: getitemdigitalassets
+        description: Get item digital assets
+        call: constellation-brands.getitemdigitalassets
+        with:
+          itemId: rest.itemId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: constellation-brands-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Constellation Brands Partner API. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-bottle-shots
+      description: List bottle shots
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listbottleshots
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-bottle-shot-gtin
+      description: Get bottle shot by GTIN
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.getbottleshot
+      with:
+        gtin: tools.gtin
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-hot-sheets
+      description: List hot sheets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listhotsheets
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-neck-hangers
+      description: List neck hangers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listneckhangers
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-recipes
+      description: List recipes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listrecipes
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-shelf-talkers
+      description: List shelf talkers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listshelftalkers
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-tasting-notes
+      description: List tasting notes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listtastingnotes
+      with:
+        modifiedSince: tools.modifiedSince
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: list-items
+      description: List items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.listitems
+      with:
+        page: tools.page
+        pageSize: tools.pageSize
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-item-id
+      description: Get item by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.getitem
+      with:
+        itemId: tools.itemId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-item-digital-assets
+      description: Get item digital assets
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: constellation-brands.getitemdigitalassets
+      with:
+        itemId: tools.itemId
+      outputParameters:
+      - type: object
+        mapping: $.

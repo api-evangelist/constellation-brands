@@ -1,0 +1,927 @@
+{
+  "item": [
+    {
+      "id": "c3d3f343-38b6-4727-a789-8fdeeff7d7b7",
+      "name": "List bottle shots",
+      "request": {
+        "name": "List bottle shots",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "bottleShots"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "777113fb-9496-431d-9db3-d2d1a5309773",
+          "name": "Bottle shot collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "bottleShots"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7a79fc95-d0d7-46f6-bc81-3eef77b286bd",
+      "name": "Get bottle shot by GTIN",
+      "request": {
+        "name": "Get bottle shot by GTIN",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "bottleShots",
+            ":gtin"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "gtin",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "46d5b37d-39a6-446f-9e7d-303c42fe364e",
+          "name": "Bottle shot resource",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "bottleShots",
+                ":gtin"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "gtin",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"key_0\": true\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "e1dadfa8-f5a5-4b2f-8d42-14f1a8b0f3d3",
+      "name": "List tasting notes",
+      "request": {
+        "name": "List tasting notes",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "tastingNotes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "8dae17e9-fd36-4f41-9f82-2959742c65b2",
+          "name": "Tasting notes collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "tastingNotes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "94a195fc-aa72-4fe3-809e-b8611f713435",
+      "name": "List hot sheets",
+      "request": {
+        "name": "List hot sheets",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "hotSheets"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "51b1971f-1c54-47f9-8776-e97d9b4d975c",
+          "name": "Hot sheets collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "hotSheets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ed10e016-6fd7-4e92-9e97-4ff0fcaf7b3d",
+      "name": "List shelf talkers",
+      "request": {
+        "name": "List shelf talkers",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "shelfTalkers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "479e0c95-3052-4493-87d9-8ca2a434d341",
+          "name": "Shelf talkers collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "shelfTalkers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fdb9efb6-ae93-444b-ba42-2533025997f3",
+      "name": "List neck hangers",
+      "request": {
+        "name": "List neck hangers",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "neckHangers"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "4a23ff02-62f5-4d12-bf7e-ca55716e3014",
+          "name": "Neck hangers collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "neckHangers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "7dc854fd-f28c-4af1-a79b-a3b89020ab86",
+      "name": "List recipes",
+      "request": {
+        "name": "List recipes",
+        "description": {},
+        "url": {
+          "path": [
+            "api",
+            "1.0",
+            "recipes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "modifiedSince",
+              "value": "<dateTime>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "208f35e4-d3e4-4e80-95c1-feb9ea32e81c",
+          "name": "Recipes collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "recipes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "af2eb1fa-0ad6-4d45-929d-e917265399d0",
+      "name": "List items",
+      "request": {
+        "name": "List items",
+        "description": {},
+        "url": {
+          "path": [
+            "v3",
+            "items"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "page",
+              "value": "<integer>"
+            },
+            {
+              "disabled": false,
+              "key": "pageSize",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "4ab35ed9-48cf-473f-a499-a467a212a6f5",
+          "name": "Items collection",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v3",
+                "items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "fd617e2d-a972-46cd-8d24-3b27bd921bb6",
+      "name": "Get item by ID",
+      "request": {
+        "name": "Get item by ID",
+        "description": {},
+        "url": {
+          "path": [
+            "v3",
+            "items",
+            ":itemId"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "itemId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d42f7f20-51dc-4be4-aa69-e326c13543e0",
+          "name": "Item resource",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v3",
+                "items",
+                ":itemId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "itemId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"key_0\": true\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "dfe3e5d0-6d9a-4e1e-b849-52075b72f0e1",
+      "name": "Get item digital assets",
+      "request": {
+        "name": "Get item digital assets",
+        "description": {},
+        "url": {
+          "path": [
+            "v3",
+            "items",
+            ":itemId",
+            "digitalAssets"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "itemId",
+              "description": "(Required) "
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2fbe54a0-e366-4a46-ad41-5aa12a9f7a4f",
+          "name": "Digital assets for item",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v3",
+                "items",
+                ":itemId",
+                "digitalAssets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "apiKey",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "itemId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5372,\n      \"key_1\": \"string\",\n      \"key_2\": 9378\n    },\n    {\n      \"key_0\": 1003\n    }\n  ],\n  \"total\": 1615,\n  \"page\": 8894\n}",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.cbrands.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "99de1976-255c-478a-8cae-de05e1f07848",
+    "name": "Constellation Brands Partner API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Constellation Brands Partner API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List bottle shots",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/bottleShots",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List bottle shots"
+    },
+    {
+      "info": {
+        "name": "Get bottle shot by GTIN",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/bottleShots/:gtin",
+        "params": [
+          {
+            "name": "gtin",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get bottle shot by GTIN"
+    },
+    {
+      "info": {
+        "name": "List tasting notes",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/tastingNotes",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List tasting notes"
+    },
+    {
+      "info": {
+        "name": "List hot sheets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/hotSheets",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List hot sheets"
+    },
+    {
+      "info": {
+        "name": "List shelf talkers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/shelfTalkers",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List shelf talkers"
+    },
+    {
+      "info": {
+        "name": "List neck hangers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/neckHangers",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List neck hangers"
+    },
+    {
+      "info": {
+        "name": "List recipes",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/api/1.0/recipes",
+        "params": [
+          {
+            "name": "modifiedSince",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List recipes"
+    },
+    {
+      "info": {
+        "name": "List items",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/v3/items",
+        "params": [
+          {
+            "name": "page",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List items"
+    },
+    {
+      "info": {
+        "name": "Get item by ID",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/v3/items/:itemId",
+        "params": [
+          {
+            "name": "itemId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get item by ID"
+    },
+    {
+      "info": {
+        "name": "Get item digital assets",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.cbrands.com/v3/items/:itemId/digitalAssets",
+        "params": [
+          {
+            "name": "itemId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get item digital assets"
+    }
+  ],
+  "bundled": true
+}

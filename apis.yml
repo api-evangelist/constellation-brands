@@ -127,7 +127,7 @@ common:
     url: https://www.linkedin.com/company/constellation-brands
   - type: Website
     url: https://www.cbrands.com/
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://dev.cbrands.com/docs/
   - type: GitHubOrganization
     url: https://github.com/ConstellationBrands

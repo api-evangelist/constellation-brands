@@ -123,6 +123,10 @@ apis:
       Supplies cocktail and beverage recipes featuring Constellation brands so on-premise partners and digital
       experiences can surface branded drink ideas.
 common:
+  - type: DomainSecurity
+    url: security/constellation-brands-domain-security.yml
+  - type: Authentication
+    url: authentication/constellation-brands-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/constellation-brands
   - type: Website

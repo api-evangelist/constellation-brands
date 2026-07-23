@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: Constellation Brands Partner BottleShots Items API
+  version: '1.0'
+  description: Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.
+  x-generated-from: https://dev.cbrands.com/docs/
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://api.cbrands.com
+  description: Constellation Brands API
+security:
+- ApiKeyAuth: []
+tags:
+- name: Items
+paths:
+  /v3/items:
+    get:
+      summary: List items
+      operationId: listItems
+      parameters:
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Items collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Items
+  /v3/items/{itemId}:
+    get:
+      summary: Get item by ID
+      operationId: getItem
+      parameters:
+      - name: itemId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Item resource
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+      tags:
+      - Items
+  /v3/items/{itemId}/digitalAssets:
+    get:
+      summary: Get item digital assets
+      operationId: getItemDigitalAssets
+      parameters:
+      - name: itemId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Digital assets for item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Items
+components:
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Resource'
+        total:
+          type: integer
+        page:
+          type: integer
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: apiKey

@@ -10,7 +10,20 @@ tags:
   - Spirits
   - Wine
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/constellation-brands.png
 access: 3rd-Party
 created: '2026-03-21'
 modified: '2026-05-19'
@@ -24,104 +37,172 @@ description: >-
   and an items product API) to distributors, retailers, and on-premise partners. Most endpoints require an API key
   issued through the developer registration process.
 apis:
-  - aid: constellation-brands:product
-    name: Product Items API
-    tags:
-      - Catalog
-      - Items
-      - Products
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/v3
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-      - url: openapi/constellation-brands-openapi.yml
-        type: OpenAPI
-    description: >-
-      Provides item-level product master data including SKU identifiers, descriptions, varietal and category metadata,
-      and pointers to digital assets. Used by partners to keep distributor and retailer catalogs in sync with
-      Constellation's source-of-truth data.
-  - aid: constellation-brands:bottle-shots
-    name: Bottle Shots API
-    tags:
-      - Bottle Shots
-      - Digital Assets
-      - Images
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: >-
-      Returns promotional bottle-shot imagery for Constellation Brands products in multiple formats (PNG, JPG) and
-      resolutions for use on partner sites, e-commerce experiences, and printed materials.
-  - aid: constellation-brands:tasting-notes
-    name: Tasting Notes API
-    tags:
-      - Documents
-      - Tasting Notes
-      - Wine
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: >-
-      Retrieves tasting-note documents for wine and spirits brands so partners can render or print structured tasting
-      copy alongside bottle shots and pricing.
-  - aid: constellation-brands:hot-sheets
-    name: Hot Sheets API
-    tags:
-      - Awards
-      - Documents
-      - Reviews
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: >-
-      Delivers "hot sheets" containing critical-review scores, awards, and promotional copy that distributors use to
-      merchandise Constellation brands at retail.
-  - aid: constellation-brands:shelf-talkers
-    name: Shelf Talkers API
-    tags:
-      - Merchandising
-      - POS
-      - Retail
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: Provides point-of-sale shelf-talker artwork keyed to specific products and promotional periods.
-  - aid: constellation-brands:neck-hangers
-    name: Neck Hangers API
-    tags:
-      - Merchandising
-      - POS
-      - Retail
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: >-
-      Returns neck-hanger artwork that distributors and retailers attach to bottles for in-store merchandising and
-      promotions.
-  - aid: constellation-brands:recipes
-    name: Recipes API
-    tags:
-      - Cocktails
-      - Recipes
-    humanURL: https://dev.cbrands.com/docs/
-    baseURL: https://api.cbrands.com/api/1.0
-    properties:
-      - url: https://dev.cbrands.com/docs/
-        type: Documentation
-    description: >-
-      Supplies cocktail and beverage recipes featuring Constellation brands so on-premise partners and digital
-      experiences can surface branded drink ideas.
+- aid: constellation-brands:bottle-shots
+  name: Bottle Shots API
+  tags:
+  - Bottle Shots
+  - Digital Assets
+  - Images
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Returns promotional bottle-shot imagery for Constellation Brands products in multiple formats (PNG,
+    JPG) and resolutions for use on partner sites, e-commerce experiences, and printed materials.
+- aid: constellation-brands:tasting-notes
+  name: Tasting Notes API
+  tags:
+  - Documents
+  - Tasting Notes
+  - Wine
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Retrieves tasting-note documents for wine and spirits brands so partners can render or print structured
+    tasting copy alongside bottle shots and pricing.
+- aid: constellation-brands:hot-sheets
+  name: Hot Sheets API
+  tags:
+  - Awards
+  - Documents
+  - Reviews
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Delivers "hot sheets" containing critical-review scores, awards, and promotional copy that distributors
+    use to merchandise Constellation brands at retail.
+- aid: constellation-brands:shelf-talkers
+  name: Shelf Talkers API
+  tags:
+  - Merchandising
+  - POS
+  - Retail
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Provides point-of-sale shelf-talker artwork keyed to specific products and promotional periods.
+- aid: constellation-brands:neck-hangers
+  name: Neck Hangers API
+  tags:
+  - Merchandising
+  - POS
+  - Retail
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Returns neck-hanger artwork that distributors and retailers attach to bottles for in-store merchandising
+    and promotions.
+- aid: constellation-brands:recipes
+  name: Recipes API
+  tags:
+  - Cocktails
+  - Recipes
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/api/1.0
+  properties:
+  - url: https://dev.cbrands.com/docs/
+    type: Documentation
+  description: >-
+    Supplies cocktail and beverage recipes featuring Constellation brands so on-premise partners and digital
+    experiences can surface branded drink ideas.
+- aid: constellation-brands:constellation-brands-bottleshots-api
+  name: Constellation Brands BottleShots API
+  description: The BottleShots API from Constellation Brands — 2 operation(s) for bottleshots.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - BottleShots
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-bottleshots-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-hotsheets-api
+  name: Constellation Brands HotSheets API
+  description: The HotSheets API from Constellation Brands — 1 operation(s) for hotsheets.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - HotSheets
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-hotsheets-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-items-api
+  name: Constellation Brands Items API
+  description: The Items API from Constellation Brands — 3 operation(s) for items.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - Items
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-items-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-neckhangers-api
+  name: Constellation Brands NeckHangers API
+  description: The NeckHangers API from Constellation Brands — 1 operation(s) for neckhangers.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - NeckHangers
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-neckhangers-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-recipes-api
+  name: Constellation Brands Recipes API
+  description: The Recipes API from Constellation Brands — 1 operation(s) for recipes.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - Recipes
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-recipes-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-shelftalkers-api
+  name: Constellation Brands ShelfTalkers API
+  description: The ShelfTalkers API from Constellation Brands — 1 operation(s) for shelftalkers.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - ShelfTalkers
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-shelftalkers-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
+- aid: constellation-brands:constellation-brands-tastingnotes-api
+  name: Constellation Brands TastingNotes API
+  description: The TastingNotes API from Constellation Brands — 1 operation(s) for tastingnotes.
+  humanURL: https://dev.cbrands.com/docs/
+  baseURL: https://api.cbrands.com/v3
+  tags:
+  - TastingNotes
+  properties:
+  - type: OpenAPI
+    url: openapi/constellation-brands-tastingnotes-api-openapi.yml
+  - type: Documentation
+    url: https://dev.cbrands.com/docs/
 common:
   - type: AgenticAccess
     url: agentic-access/constellation-brands-agentic-access.yml

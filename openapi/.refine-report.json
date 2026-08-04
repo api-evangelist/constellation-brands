@@ -1,0 +1,26 @@
+{
+  "provider": "constellation-brands",
+  "sources": [
+    "constellation-brands-bottleshots-api-openapi.yml",
+    "constellation-brands-hotsheets-api-openapi.yml",
+    "constellation-brands-items-api-openapi.yml",
+    "constellation-brands-neckhangers-api-openapi.yml",
+    "constellation-brands-recipes-api-openapi.yml",
+    "constellation-brands-shelftalkers-api-openapi.yml",
+    "constellation-brands-tastingnotes-api-openapi.yml"
+  ],
+  "outputs": [
+    "constellation-brands-bottleshots-api-openapi.yml",
+    "constellation-brands-hotsheets-api-openapi.yml",
+    "constellation-brands-items-api-openapi.yml",
+    "constellation-brands-neckhangers-api-openapi.yml",
+    "constellation-brands-recipes-api-openapi.yml",
+    "constellation-brands-shelftalkers-api-openapi.yml",
+    "constellation-brands-tastingnotes-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

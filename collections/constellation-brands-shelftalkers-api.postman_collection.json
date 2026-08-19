@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "f747ff29-120b-48e5-956a-1508f12b18b4",
+      "name": "ShelfTalkers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e48a1560-e58e-4bc6-bb2d-94d887e2bd79",
+          "name": "List shelf talkers",
+          "request": {
+            "name": "List shelf talkers",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "shelfTalkers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be023b3d-e319-4f53-93c1-30cb63223820",
+              "name": "Shelf talkers collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "1.0",
+                    "shelfTalkers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "modifiedSince",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"key_0\": 6932.475484737029,\n      \"key_1\": \"string\",\n      \"key_2\": false\n    },\n    {\n      \"key_0\": 4377.2090981789825,\n      \"key_1\": \"string\",\n      \"key_2\": 8242.582108286811\n    }\n  ],\n  \"total\": 4679,\n  \"page\": 2030\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.cbrands.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9b502bfc-2b45-44b7-aafe-f9d66144813f",
+    "name": "Constellation Brands Partner BottleShots ShelfTalkers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.",
+      "type": "text/plain"
+    }
+  }
+}

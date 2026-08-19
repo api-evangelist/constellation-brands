@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Constellation Brands Partner BottleShots API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BottleShots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List bottle shots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.cbrands.com/api/1.0/bottleShots",
+            "params": [
+              {
+                "name": "modifiedSince",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List bottle shots"
+        },
+        {
+          "info": {
+            "name": "Get bottle shot by GTIN",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.cbrands.com/api/1.0/bottleShots/:gtin",
+            "params": [
+              {
+                "name": "gtin",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get bottle shot by GTIN"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Constellation Brands Partner BottleShots HotSheets API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "apiKey",
+      "value": "{{apiKey}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "HotSheets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List hot sheets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.cbrands.com/api/1.0/hotSheets",
+            "params": [
+              {
+                "name": "modifiedSince",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List hot sheets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

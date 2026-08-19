@@ -1,0 +1,135 @@
+{
+  "item": [
+    {
+      "id": "d8334e63-b34c-48bb-8ccb-8f030f29bd90",
+      "name": "NeckHangers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "49859191-7e17-441f-b876-17bea8992139",
+          "name": "List neck hangers",
+          "request": {
+            "name": "List neck hangers",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "neckHangers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ac765616-a457-4fe4-9bb5-565619b5df7c",
+              "name": "Neck hangers collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "1.0",
+                    "neckHangers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "modifiedSince",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": false,\n      \"key_3\": 5007.919900329148\n    },\n    {\n      \"key_0\": 9788,\n      \"key_1\": true,\n      \"key_2\": 2524.6032541937925,\n      \"key_3\": \"string\"\n    }\n  ],\n  \"total\": 8461,\n  \"page\": 8721\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.cbrands.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "26569bc9-c10d-44ff-8372-c80ccfd38cb9",
+    "name": "Constellation Brands Partner BottleShots NeckHangers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.",
+      "type": "text/plain"
+    }
+  }
+}

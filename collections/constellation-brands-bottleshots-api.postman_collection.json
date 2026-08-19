@@ -1,0 +1,229 @@
+{
+  "item": [
+    {
+      "id": "485d36e0-5785-4968-b81a-1ac050a15378",
+      "name": "BottleShots",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f65a4916-1433-4ef5-910e-6d2922a7421a",
+          "name": "List bottle shots",
+          "request": {
+            "name": "List bottle shots",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "bottleShots"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "modifiedSince",
+                  "value": "<dateTime>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "45bbb86e-0c11-460b-9e76-84dd4d1a3be5",
+              "name": "Bottle shot collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "1.0",
+                    "bottleShots"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "modifiedSince",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"key_0\": 230.69853427439503,\n      \"key_1\": 9938\n    },\n    {\n      \"key_0\": 9953.758871128728,\n      \"key_1\": 8779,\n      \"key_2\": 5289.655757761684\n    }\n  ],\n  \"total\": 6882,\n  \"page\": 3130\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "888b5f7c-15c3-483d-aa52-192367871f5e",
+          "name": "Get bottle shot by GTIN",
+          "request": {
+            "name": "Get bottle shot by GTIN",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "1.0",
+                "bottleShots",
+                ":gtin"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "gtin",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "116247bc-7444-477d-a5ed-73ea06ff1633",
+              "name": "Bottle shot resource",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "1.0",
+                    "bottleShots",
+                    ":gtin"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "apiKey",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "gtin",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 8330,\n  \"key_1\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.cbrands.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "apiKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "bccb1c36-3bb6-4489-9361-c2cf6d614775",
+    "name": "Constellation Brands Partner BottleShots API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.",
+      "type": "text/plain"
+    }
+  }
+}

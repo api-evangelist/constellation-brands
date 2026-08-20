@@ -42,6 +42,10 @@ apis:
   tags:
   - Bottle Shots
   - Digital Assets
+  - Image
+  tags_raw:
+  - Bottle Shots
+  - Digital Assets
   - Images
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/api/1.0
@@ -83,6 +87,10 @@ apis:
   name: Shelf Talkers API
   tags:
   - Merchandising
+  - Point-of-Sale
+  - Retail
+  tags_raw:
+  - Merchandising
   - POS
   - Retail
   humanURL: https://dev.cbrands.com/docs/
@@ -95,6 +103,10 @@ apis:
 - aid: constellation-brands:neck-hangers
   name: Neck Hangers API
   tags:
+  - Merchandising
+  - Point-of-Sale
+  - Retail
+  tags_raw:
   - Merchandising
   - POS
   - Retail
@@ -125,6 +137,8 @@ apis:
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/v3
   tags:
+  - Bottle Shots
+  tags_raw:
   - BottleShots
   properties:
   - type: OpenAPI
@@ -149,6 +163,8 @@ apis:
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/v3
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -197,6 +213,8 @@ apis:
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/v3
   tags:
+  - Tasting Notes
+  tags_raw:
   - TastingNotes
   properties:
   - type: OpenAPI

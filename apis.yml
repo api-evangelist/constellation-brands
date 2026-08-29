@@ -234,6 +234,9 @@ apis:
   - type: Documentation
     url: https://dev.cbrands.com/docs/
 common:
+  - type: CapabilityMap
+    url: capabilities/constellation-brands-capability-edges.yml
+    name: Constellation Brands Business Capability Map
   - type: AgenticAccess
     url: agentic-access/constellation-brands-agentic-access.yml
   - type: DomainSecurity

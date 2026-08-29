@@ -1,0 +1,37 @@
+slug: constellation-brands
+provider: Constellation Brands
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Retail & Consumer Goods
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Items
+  spec_file: constellation-brands-items-api-openapi.yml
+  capability_id: BC-2370.10
+  capability_id_l1: BC-2370
+  capability_name: Item Master Data Management
+  confidence: 0.85
+  evidence: GET /v3/items/{itemId}  getItem  Get item by ID
+  reason: Canonical item records with attributes and linked digital assets from a CPG manufacturer's product
+    API — item master data management.
+- tag: TastingNotes
+  spec_file: constellation-brands-tastingnotes-api-openapi.yml
+  capability_id: BC-2370
+  capability_id_l1: BC-2370
+  capability_name: Product Information Management
+  confidence: 0.72
+  evidence: '"Partner-facing REST API exposing Constellation Brands product master data and merchandising
+    digital assets including bottle shots, tasting notes, hot sheets, shelf talkers"; GET /api/1.0/tastingNotes
+    "List tasting notes"'
+  reason: The operation serves product marketing/merchandising content (tasting notes) from the brand
+    owner's product data store out to distributors and retailers — product information/content management.
+    Which sub-capability (authoring vs. channel syndication) the endpoint realises is ambiguous from a
+    single read-only list operation, so only the L1 is asserted.

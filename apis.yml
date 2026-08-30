@@ -99,7 +99,7 @@ apis:
   name: Shelf Talkers API
   tags:
   - Merchandising
-  - Point-of-Sale
+  - POS
   - Retail
   tags_raw:
   - Merchandising
@@ -116,7 +116,7 @@ apis:
   name: Neck Hangers API
   tags:
   - Merchandising
-  - Point-of-Sale
+  - POS
   - Retail
   tags_raw:
   - Merchandising
@@ -149,7 +149,7 @@ apis:
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/v3
   tags:
-  - Bottle Shots
+  - BottleShots
   tags_raw:
   - BottleShots
   properties:
@@ -225,7 +225,7 @@ apis:
   humanURL: https://dev.cbrands.com/docs/
   baseURL: https://api.cbrands.com/v3
   tags:
-  - Tasting Notes
+  - TastingNotes
   tags_raw:
   - TastingNotes
   properties:

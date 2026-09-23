@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Constellation Brands Partner BottleShots NeckHangers API
+  title: Constellation Brands Partner Neck Hangers API
   version: '1.0'
   description: Partner-facing REST API exposing Constellation Brands product master data and merchandising digital assets including bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, and cocktail recipes. All endpoints require an API key issued through the developer portal.
   x-generated-from: https://dev.cbrands.com/docs/
@@ -34,9 +34,6 @@ paths:
       - NeckHangers
 components:
   schemas:
-    Resource:
-      type: object
-      additionalProperties: true
     Collection:
       type: object
       properties:
@@ -48,6 +45,9 @@ components:
           type: integer
         page:
           type: integer
+    Resource:
+      type: object
+      additionalProperties: true
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

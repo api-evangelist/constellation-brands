@@ -1,13 +1,7 @@
 {
   "provider": "constellation-brands",
   "sources": [
-    "constellation-brands-bottleshots-api-openapi.yml",
-    "constellation-brands-hotsheets-api-openapi.yml",
-    "constellation-brands-items-api-openapi.yml",
-    "constellation-brands-neckhangers-api-openapi.yml",
-    "constellation-brands-recipes-api-openapi.yml",
-    "constellation-brands-shelftalkers-api-openapi.yml",
-    "constellation-brands-tastingnotes-api-openapi.yml"
+    "_ae-authored/constellation-brands-openapi.yml"
   ],
   "outputs": [
     "constellation-brands-bottleshots-api-openapi.yml",
@@ -21,6 +15,35 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "constellation-brands-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/bottleShots -> BottleShots",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/bottleShots/{gtin} -> BottleShots",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/tastingNotes -> TastingNotes",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/hotSheets -> HotSheets",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/shelfTalkers -> ShelfTalkers",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/neckHangers -> NeckHangers",
+    "constellation-brands-openapi.yml: tagged paths GET /api/1.0/recipes -> Recipes",
+    "constellation-brands-openapi.yml: tagged paths GET /v3/items -> Items",
+    "constellation-brands-openapi.yml: tagged paths GET /v3/items/{itemId} -> Items",
+    "constellation-brands-openapi.yml: tagged paths GET /v3/items/{itemId}/digitalAssets -> Items",
+    "constellation-brands-openapi.yml: declared missing tag: BottleShots",
+    "constellation-brands-openapi.yml: declared missing tag: HotSheets",
+    "constellation-brands-openapi.yml: declared missing tag: Items",
+    "constellation-brands-openapi.yml: declared missing tag: NeckHangers",
+    "constellation-brands-openapi.yml: declared missing tag: Recipes",
+    "constellation-brands-openapi.yml: declared missing tag: ShelfTalkers",
+    "constellation-brands-openapi.yml: declared missing tag: TastingNotes",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "constellation-brands-bottleshots-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-hotsheets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-neckhangers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-recipes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-shelftalkers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "constellation-brands-tastingnotes-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

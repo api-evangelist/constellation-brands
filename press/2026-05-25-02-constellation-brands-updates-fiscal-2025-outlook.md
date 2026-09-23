@@ -1,7 +1,9 @@
 ---
 title: Constellation Brands Updates Fiscal 2025 Outlook
 url: https://www.cbrands.com/blogs/press-releases/constellation-brands-updates-fiscal-2025-outlook
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Constellation Brands" press release artificial intelligence'
 position: 2
 source: serpapi-google

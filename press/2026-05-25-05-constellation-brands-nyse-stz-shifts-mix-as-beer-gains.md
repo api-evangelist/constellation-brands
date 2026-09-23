@@ -1,7 +1,9 @@
 ---
 title: 'Constellation Brands (NYSE: STZ) shifts mix as beer gains ...'
 url: https://www.stocktitan.net/sec-filings/STZ/8-k-constellation-brands-inc-reports-material-event-b16203aed940.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Constellation Brands" press release artificial intelligence'
 position: 5
 source: serpapi-google

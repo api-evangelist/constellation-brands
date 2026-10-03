@@ -34,9 +34,6 @@ paths:
       - HotSheets
 components:
   schemas:
-    Resource:
-      type: object
-      additionalProperties: true
     Collection:
       type: object
       properties:
@@ -48,6 +45,9 @@ components:
           type: integer
         page:
           type: integer
+    Resource:
+      type: object
+      additionalProperties: true
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

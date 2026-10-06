@@ -40,7 +40,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/constellation-brands.png
 access: 3rd-Party
 created: '2026-03-21'
-modified: '2026-05-19'
+modified: '2026-10-06'
 position: Consuming
 specificationVersion: '0.23'
 kind: company
@@ -236,6 +236,10 @@ apis:
   - type: Documentation
     url: https://dev.cbrands.com/docs/
 common:
+  - url: https://www.cbrands.com/blogs/stories
+    type: Blog
+  - url: https://www.cbrands.com/blogs/stories.atom
+    type: BlogRSS
   - type: CapabilityMap
     url: capabilities/constellation-brands-capability-edges.yml
     name: Constellation Brands Business Capability Map

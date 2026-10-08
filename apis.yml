@@ -236,6 +236,12 @@ apis:
   - type: Documentation
     url: https://dev.cbrands.com/docs/
 common:
+  - type: Plans
+    url: plans/constellation-brands-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/constellation-brands-rate-limits.yml
+  - type: FinOps
+    url: finops/constellation-brands-finops.yml
   - url: https://www.cbrands.com/blogs/stories
     type: Blog
   - url: https://www.cbrands.com/blogs/stories.atom

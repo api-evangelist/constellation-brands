@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/constellation-brands/integrations
+- https://n8n.io/integrations/constellation-brands/
+- https://composio.dev/toolkits/constellation-brands
+- https://monid.ai/tools/constellation-brands
+checked:
+- https://composio.dev/toolkits/constellation-brands
+- https://monid.ai/tools/constellation-brands
+- https://n8n.io/integrations/constellation-brands/
+- https://zapier.com/apps/constellation-brands/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

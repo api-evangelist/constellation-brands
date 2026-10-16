@@ -1,0 +1,21 @@
+{
+  "repo": "constellation-brands",
+  "feeds": [
+    {
+      "source": "https://www.cbrands.com/blogs/stories",
+      "feed_url": "https://www.cbrands.com/blogs/stories.atom",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.cbrands.com/blogs/stories.atom",
+      "feed_url": "https://www.cbrands.com/blogs/stories.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-10-10T13:15:00Z"
+}

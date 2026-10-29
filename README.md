@@ -1,4 +1,4 @@
-# Constellation Brands (constellation-brands)
+# Constellation Brands
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,176 +66,135 @@
 
 Constellation Brands is a Fortune 500 producer and marketer of beer, wine, and spirits brands such as Corona, Modelo, Robert Mondavi, and Casa Noble. Constellation publishes a partner-oriented API catalog at dev.cbrands.com that exposes product, brand, and digital-asset data (bottle shots, tasting notes, hot sheets, shelf talkers, neck hangers, recipes, and an items product API) to distributors, retailers, and on-premise partners. Most endpoints require an API key issued through the developer registration process.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/constellation-brands/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/constellation-brands/refs/heads/main/apis.yml)
+**Areas:** Alcohol · Beer · Beverages · Digital Assets · Fortune 500 · Spirits · Wine · Food and Beverage
 
-## Scope
+## Constellation Brands on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Constellation Brands is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/constellation-brands/](https://apis.io/providers/constellation-brands/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (13)
 
-- Alcohol
-- Beer
-- Beverages
-- Digital Assets
-- Fortune 500
-- Spirits
-- Wine
+- [Bottle Shots API](https://apis.io/apis/constellation-brands/bottle-shots/) — Returns promotional bottle-shot imagery for Constellation Brands products in multiple formats (PNG, JPG) and resolutions for use on partner sites,…
+- [Tasting Notes API](https://apis.io/apis/constellation-brands/tasting-notes/) — Retrieves tasting-note documents for wine and spirits brands so partners can render or print structured tasting copy alongside bottle shots and pricing.
+- [Hot Sheets API](https://apis.io/apis/constellation-brands/hot-sheets/) — Delivers "hot sheets" containing critical-review scores, awards, and promotional copy that distributors use to merchandise Constellation brands at retail.
+- [Shelf Talkers API](https://apis.io/apis/constellation-brands/shelf-talkers/) — Provides point-of-sale shelf-talker artwork keyed to specific products and promotional periods.
+- [Neck Hangers API](https://apis.io/apis/constellation-brands/neck-hangers/) — Returns neck-hanger artwork that distributors and retailers attach to bottles for in-store merchandising and promotions.
+- [Recipes API](https://apis.io/apis/constellation-brands/recipes/) — Supplies cocktail and beverage recipes featuring Constellation brands so on-premise partners and digital experiences can surface branded drink ideas.
+- [Constellation Brands BottleShots API](https://apis.io/apis/constellation-brands/constellation-brands-bottleshots-api/) — The BottleShots API from Constellation Brands — 2 operation(s) for bottleshots.
+- [Constellation Brands HotSheets API](https://apis.io/apis/constellation-brands/constellation-brands-hotsheets-api/) — The HotSheets API from Constellation Brands — 1 operation(s) for hotsheets.
+- [Constellation Brands Items API](https://apis.io/apis/constellation-brands/constellation-brands-items-api/) — The Items API from Constellation Brands — 3 operation(s) for items.
+- [Constellation Brands NeckHangers API](https://apis.io/apis/constellation-brands/constellation-brands-neckhangers-api/) — The NeckHangers API from Constellation Brands — 1 operation(s) for neckhangers.
+- [Constellation Brands Recipes API](https://apis.io/apis/constellation-brands/constellation-brands-recipes-api/) — The Recipes API from Constellation Brands — 1 operation(s) for recipes.
+- [Constellation Brands ShelfTalkers API](https://apis.io/apis/constellation-brands/constellation-brands-shelftalkers-api/) — The ShelfTalkers API from Constellation Brands — 1 operation(s) for shelftalkers.
+- [Constellation Brands TastingNotes API](https://apis.io/apis/constellation-brands/constellation-brands-tastingnotes-api/) — The TastingNotes API from Constellation Brands — 1 operation(s) for tastingnotes.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Product Items API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Provides item-level product master data including SKU identifiers, descriptions, varietal and category metadata, and pointers to digital assets. Used by partners to keep distributor and retailer catalogs in sync with Constellation's source-of-truth data.
+- [Constellation Brands Agentic Access](https://apis.io/agentic-access/constellation-brands/constellation-brands-agentic-access/)
 
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/v3`
+#### Collections (8)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Catalog
-- Items
-- Products
+- [Constellation Brands Partner API](https://apis.io/collections/constellation-brands/open-constellation-brands/)
+- [Constellation Brands Partner BottleShots API](https://apis.io/collections/constellation-brands/open-constellation-brands-bottleshots-api/)
+- [Constellation Brands Partner BottleShots HotSheets API](https://apis.io/collections/constellation-brands/open-constellation-brands-hotsheets-api/)
+- [Constellation Brands Partner BottleShots Items API](https://apis.io/collections/constellation-brands/open-constellation-brands-items-api/)
+- [Constellation Brands Partner BottleShots NeckHangers API](https://apis.io/collections/constellation-brands/open-constellation-brands-neckhangers-api/)
+- [Constellation Brands Partner BottleShots Recipes API](https://apis.io/collections/constellation-brands/open-constellation-brands-recipes-api/)
+- [Constellation Brands Partner BottleShots ShelfTalkers API](https://apis.io/collections/constellation-brands/open-constellation-brands-shelftalkers-api/)
+- [Constellation Brands Partner BottleShots TastingNotes API](https://apis.io/collections/constellation-brands/open-constellation-brands-tastingnotes-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://dev.cbrands.com/docs/)
-- [OpenAPI](openapi/constellation-brands-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Bottle Shots API
+- [Constellation Brands Authentication](https://apis.io/security/constellation-brands/constellation-brands-authentication/)
+- [Constellation Brands Domain Security](https://apis.io/security/constellation-brands/constellation-brands-domain-security/)
 
-Returns promotional bottle-shot imagery for Constellation Brands products in multiple formats (PNG, JPG) and resolutions for use on partner sites, e-commerce experiences, and printed materials.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
+Published plans, tiers and prices.
 
-#### Tags
+- [Constellation Brands Plans Pricing](https://apis.io/plans/constellation-brands/constellation-brands-plans-pricing/)
 
-- Bottle Shots
-- Digital Assets
-- Images
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Constellation Brands Rate Limits](https://apis.io/rate-limits/constellation-brands/constellation-brands-rate-limits/)
 
-### Tasting Notes API
+#### FinOps (1)
 
-Retrieves tasting-note documents for wine and spirits brands so partners can render or print structured tasting copy alongside bottle shots and pricing.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
+- [Constellation Brands Finops](https://apis.io/finops/constellation-brands/constellation-brands-finops/)
 
-#### Tags
+## Where to find this API
 
-- Documents
-- Tasting Notes
-- Wine
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Hot Sheets API
-
-Delivers "hot sheets" containing critical-review scores, awards, and promotional copy that distributors use to merchandise Constellation brands at retail.
-
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
-
-#### Tags
-
-- Awards
-- Documents
-- Reviews
-
-#### Properties
-
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Shelf Talkers API
-
-Provides point-of-sale shelf-talker artwork keyed to specific products and promotional periods.
-
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
-
-#### Tags
-
-- Merchandising
-- POS
-- Retail
-
-#### Properties
-
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Neck Hangers API
-
-Returns neck-hanger artwork that distributors and retailers attach to bottles for in-store merchandising and promotions.
-
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
-
-#### Tags
-
-- Merchandising
-- POS
-- Retail
-
-#### Properties
-
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Recipes API
-
-Supplies cocktail and beverage recipes featuring Constellation brands so on-premise partners and digital experiences can surface branded drink ideas.
-
-- **Human URL:** [https://dev.cbrands.com/docs/](https://dev.cbrands.com/docs/)
-- **Base URL:** `https://api.cbrands.com/api/1.0`
-
-#### Tags
-
-- Cocktails
-- Recipes
-
-#### Properties
-
-- [Documentation](https://dev.cbrands.com/docs/)
-- [Postman Collection](collections/constellation-brands.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/constellation-brands.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/constellation-brands)
 - [Website](https://www.cbrands.com/)
-- [Developer  Portal](https://dev.cbrands.com/docs/)
-- [GitHub Organization](https://github.com/ConstellationBrands)
-- [Investor  Relations](https://ir.cbrands.com/)
-- [Careers](https://careers.cbrands.com/)
-- [Privacy Policy](https://www.cbrands.com/privacy-notice)
-- [Terms of Service](https://www.cbrands.com/terms-of-use)
+- [Blog](https://www.cbrands.com/blogs/stories)
+- [Terms of service](https://www.cbrands.com/terms-of-use)
+- [Privacy policy](https://www.cbrands.com/privacy-notice)
+- [GitHub](https://github.com/ConstellationBrands)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 24.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 38.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 5.3 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/constellation-brands/](https://apis.io/providers/constellation-brands/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Constellation Brands: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/constellation-brands/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
